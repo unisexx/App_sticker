@@ -6,21 +6,11 @@ import {
 } from '@angular/router';
 
 const routes: Routes = [
-    {
-        path: '',
-        redirectTo: 'home',
-        pathMatch: 'full'
-    },
-    {
-        path: 'home',
-        loadChildren: './home/home.module#HomePageModule'
-    },
-    {
-        path: 'list',
-        loadChildren: './list/list.module#ListPageModule'
-    },
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: 'home', loadChildren: './home/home.module#HomePageModule' },
+    { path: 'list', loadChildren: './list/list.module#ListPageModule' },
     { path: 'civil', loadChildren: './civil/civil.module#CivilPageModule' },
-    { path: 'civil-detail', loadChildren: './civil-detail/civil-detail.module#CivilDetailPageModule' }
+    { path: 'civil-detail/:uuid', loadChildren: './civil-detail/civil-detail.module#CivilDetailPageModule' }
 ];
 
 @NgModule({

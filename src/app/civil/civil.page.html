@@ -6,7 +6,7 @@
 
 <ion-content>
     <ion-list>
-        <ion-item *ngFor="let civil of civils">
+        <ion-item *ngFor="let civil of civils" (click)="viewCivilDetail(civil)">
             <ion-avatar slot="start">
                 <img src="{{ civil.picture.large }}">
             </ion-avatar>
